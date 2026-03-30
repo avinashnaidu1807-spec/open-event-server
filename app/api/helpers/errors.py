@@ -40,7 +40,7 @@ class ErrorResponse(JsonApiException):
 
 class ForbiddenError(ErrorResponse):
     """
-    Default class for 403 Error
+    Represents a 403 Forbidden error response returned when access is denied.
     """
 
     title = 'Access Forbidden'
@@ -49,7 +49,7 @@ class ForbiddenError(ErrorResponse):
 
 class NotFoundError(ErrorResponse):
     """
-    Default class for 404 Error
+    Represents a 404 Not Found error response when the requested resource is not available.
     """
 
     title = 'Not Found'
@@ -63,7 +63,7 @@ class ServerError(ErrorResponse):
 
 class UnprocessableEntityError(ErrorResponse):
     """
-    Default class for 422 Error
+    Represents a 422 Unprocessable Entity error when the request data is invalid or cannot be processed.
     """
 
     status = 422
@@ -72,7 +72,7 @@ class UnprocessableEntityError(ErrorResponse):
 
 class BadRequestError(ErrorResponse):
     """
-    Default class for 400 Error
+    Represents a 400 Bad Request error when the client sends an invalid request.
     """
 
     status = 400
@@ -81,7 +81,7 @@ class BadRequestError(ErrorResponse):
 
 class ConflictError(ErrorResponse):
     """
-    Default class for 409 Error
+    Represents a 409 Conflict error when a request conflicts with the current state of the resource.
     """
 
     title = "Conflict"
@@ -90,7 +90,7 @@ class ConflictError(ErrorResponse):
 
 class MethodNotAllowed(ErrorResponse):
     """
-    Default Class to throw HTTP 405 Exception
+    Represents a 405 Method Not Allowed error when the requested HTTP method is not supported.
     """
 
     title = "Method Not Allowed"
